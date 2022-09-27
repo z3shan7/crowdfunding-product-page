@@ -4,7 +4,7 @@ button {
   font-weight: 700; }
 
 header {
-  background-image: url("/images/image-hero-desktop.jpg");
+  background-image: url("./images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -28,7 +28,7 @@ nav {
 @media screen and (max-width: 502px) {
   header {
     position: relative;
-    background-image: url(/images/image-hero-mobile.jpg);
+    background-image: url("./images/image-hero-mobile.jpg");
     background-position: center top;
     background-size: cover; }
   nav {
