@@ -1,0 +1,28 @@
+@import './abstracts/variables';
+@import './abstracts/typography';
+
+@import './layout/header-nav';
+@import './base';
+
+
+@import './components/company-title-section';
+@import './components/fund-tracking';
+@import './components/about-section';
+
+
+@import './layout/home';
+
+
+
+body {
+    max-width: 1440px;
+    min-width: 376px;
+    font-size: 16px;
+    font-family: $font-f;
+    background-color: #f7f7f7;
+
+}
+
+html {
+    font-size: 62.5%;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Crowdfunding product page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-icons">
+                <img src="./images/logo.svg" alt="company logo" class="logo-img">
+                <div class="icons">
+                    <img src="./images/icon-hamburger.svg" alt="ham img" class="ham-img">
+                    <img src="./images/icon-close-menu.svg" alt="x icon" class="close-img">
+                </div>
+            </div>
+            <div class="anchor-links">
+                <a href="#" class="nav-links">About</a>
+                <a href="#" class="nav-links">Discover</a>
+                <a href="#" class="nav-links">Get Started</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+
+            <!--  first section -->
+            <div class="company-title-section section-center">
+                <div class="company-title-section__logo-div">
+                    <img src="/images/logo-mastercraft.svg" alt="Company logo"
+                        class="company-title-section__company-logo">
+                </div>
+                <div class="company-title-section__header">
+                    <h1 class="company-title-section__header--primary-heading">Mastercraft Bamboo Monitor Riser</h1>
+                    <p class="company-title-section__header--primary-text">A beautiful & handcrafted monitor stand to
+                        reduce neck and eye strain.</p>
+                </div>
+                <div class="company-title-section__btns">
+                    <button type="button" class="company-title-section__btns--btn1">Back this project</button>
+                    <button type="button" class="company-title-section__btns--btn2" id="bookmark-btn">
+                        <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                            </g>
+                            <span class="button-text">
+                                Bookmark
+                            </span></button>
+                </div>
+            </div>
+
+            <!-- first section ends -->
+
+            <!-- second section  -->
+
+            <section class="fund-tracking section-center">
+                <div class="funds">
+
+                    <div class="funds__header">
+                        <p class="funds__header--section-heading" id="fundAmount ">$89,914</p>
+                        <p class="funds__header--text" id="needed"> of $100,000 backed</p>
+                    </div>
+                    <div class="funds__header">
+                        <p class="funds__header--section-heading" id="fundAmount">5007</p>
+                        <p class="funds__header--text"> total backers</p>
+                    </div>
+                    <div class="funds__header">
+                        <p class="funds__header--section-heading" id="daysleft">56</p>
+                        <p class="funds__header--text"> days left</p>
+                    </div>
+                </div>
+
+                <div class="funds__range">
+                    <div class="funds__range--active"></div>
+                </div>
+            </section>
+
+            <!-- second section ends -->
+
+            <section class="about section-center">
+                <div class="about-project">
+                    <p class="heading-primary">About this project</p>
+                    <p class="paragraph">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
+                        that elevates your screen
+                        to a more comfortable viewing height. Placing your monitor at eye level has the potential to
+                        improve
+                        your posture and make you more comfortable while at work, helping you stay focused on the task
+                        at
+                        hand.</p>
+                    <p class="paragraph">Featuring artisan craftsmanship, the simplicity of design creates extra desk
+                        space below your computer
+                        to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+                </div>
+                <div class="pledge-section">
+                    <div class="pledge-section__products row-1">
+                        <div class="col">
+                            <p class="col--heading-primary">Bamboo Stand</p>
+                            <p class="col--min-pledge-amount">Pledge $25 or more</p>
+                        </div>
+                        <p class="paragraph">You get an ergonomic stand made of natural bamboo. You've helped us launch
+                            our promotional campaign, and
+                            you’ll be added to a special Backer member list.</p>
+                        <div class="col">
+                            <p class="col--heading-secondry">101</p>
+                            <button class="col--btn-secondry">Select Reward</button>
+                        </div>
+                    </div>
+                    <div class="pledge-section__products row-2">
+                        <div class="col">
+                            <p class="col--heading-primary">Black Edition Stand</p>
+                            <p class="col--min-pledge-amount">Pledge $75 or more</p>
+                        </div>
+                        <p class="paragraph">You get a Black Special Edition computer stand and a personal thank you.
+                            You’ll be added to our Backer
+                            member list. Shipping is included.</p>
+                        <div class="col">
+                            <p class="col--heading-secondry">64</p>
+                            <button class="col--btn-secondry">Select Reward</button>
+                        </div>
+                    </div>
+                    <div class="pledge-section__products row-3">
+                        <div class="col">
+                            <p class="col--heading-primary">Mahogany Special Edition</p>
+                            <p class="col--min-pledge-amount">Pledge $200 or more</p>
+                        </div>
+                        <p class="paragraph">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
+                            personal thank you. You’ll be added
+                            to our Backer member list. Shipping is included</p>
+                        <div class="col">
+                            <p class="col--heading-secondry">0</p>
+                            <button class="col--btn-secondry">Out of Stock</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

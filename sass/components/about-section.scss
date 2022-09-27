@@ -1,0 +1,107 @@
+.pledge-section {
+
+
+    &__products {
+        border: 1px solid hsl(0, 0%, 88%);
+        padding: 3rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+    }
+
+    .col {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        &--heading-primary {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        &--heading-secondry {
+            font-weight: 700;
+            font-size: 3rem;
+            position: relative;
+
+
+        }
+
+        &--heading-secondry::after {
+            content: 'left';
+            font-size: 1.4rem;
+            color: hsl(0, 0%, 48%);
+            font-weight: 400;
+            margin-left: 0.5rem;
+            position: absolute;
+            top: 10px;
+
+
+        }
+
+
+
+        &--min-pledge-amount {
+            font-weight: 700;
+            color: $Moderate-cyan;
+            font-size: 1.5rem;
+        }
+
+        &--btn-secondry {
+            padding: 1.7rem 1.5rem;
+            width: 150px;
+            background-color: $Moderate-cyan;
+            border: none;
+            border-radius: 2.5rem;
+            color: #fff;
+
+            &:hover {
+                background-color: $Dark-cyan;
+            }
+        }
+    }
+
+    .row-3 {
+        opacity: 0.5;
+
+        .col--btn-secondry {
+            background-color: hsl(0, 0%, 48%);
+
+        }
+    }
+
+}
+
+@media screen and (max-width:550px) {
+
+    .pledge-section {
+
+
+        &__products {
+            padding: 1.8rem;
+        }
+
+        .col {
+            flex-direction: column;
+
+            &--heading-primary {
+                font-size: 1.5rem !important;
+                margin-bottom: 1rem;
+            }
+
+            &--heading-secondry {
+                margin-bottom: 1.5rem;
+            }
+
+            &--btn-secondry {
+                width: 100px;
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+
+
+
+
+        }
+    }
+}

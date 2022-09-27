@@ -1,0 +1,120 @@
+.company-title-section {
+    position: relative;
+
+    &__logo-div {
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translate(-50%);
+
+    }
+
+    &__header {
+        margin-top: 2.5rem;
+        text-align: center;
+
+        &--primary-heading {
+            font-size: 2.5rem;
+        }
+
+        &--primary-text {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            color: $Dark-gray;
+        }
+    }
+
+    &__btns {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &--btn1 {
+            padding: 1.8rem 4rem;
+            background-color: $Moderate-cyan;
+            border: none;
+            border-radius: 2.5rem;
+            color: #fff;
+
+            &:hover {
+                background-color: $Dark-cyan;
+            }
+        }
+
+        &--btn2 {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.5rem;
+            border: none;
+            padding: 0 2rem 0 0;
+            border-radius: 2.4rem;
+
+
+            svg g circle:hover {
+                fill: $Dark-gray;
+            }
+
+            &.active-btn {
+                font-weight: 700;
+                color: $Dark-cyan;
+
+                svg g {
+                    circle {
+                        fill: $Dark-cyan;
+                    }
+
+                    path {
+                        fill: white;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .company-title-section {
+
+
+        &__header {
+
+            &--primary-heading {
+                font-size: 2rem;
+            }
+
+
+            &--primary-text {
+                font-size: 1.2rem;
+
+            }
+
+
+
+        }
+
+        .company-title-section__btns {
+
+            &--btn1 {
+                padding: 1.8rem 3rem
+            }
+
+
+            &--btn2 {
+                overflow: hidden;
+                padding: 0;
+            }
+
+            .button-text {
+                display: none;
+
+
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,74 @@
+.main-container {
+    width: 80rem;
+    margin: 0 auto;
+    position: relative;
+    top: -10rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.section-center {
+    padding: 5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.fund-tracking {
+    background-color: #fff;
+}
+
+.about {
+
+    .heading-primary {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .heading-secondry {
+        font-weight: 700;
+        font-size: 2.5rem;
+
+    }
+
+    .paragraph {
+        color: $Dark-gray;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 1.65rem;
+        line-height: 28px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .about {
+
+        .heading-primary {
+            margin-bottom: 1.5rem;
+
+        }
+
+        .paragraph {
+            font-size: 1.3rem;
+        }
+    }
+
+}
+
+@media screen and (max-width:810px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .section-center {
+        padding: 3rem;
+    }
+
+
+}

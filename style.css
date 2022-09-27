@@ -1,0 +1,331 @@
+button {
+  outline: none;
+  cursor: pointer;
+  font-weight: 700; }
+
+header {
+  background-image: url("/images/image-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  min-height: 45vh;
+  width: 100%; }
+  header .hero-img-mobile {
+    display: none; }
+
+nav {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto; }
+  nav .ham-img,
+  nav .close-img {
+    display: none; }
+  nav .anchor-links .nav-links {
+    padding: 0 0.5rem; }
+
+@media screen and (max-width: 502px) {
+  header {
+    position: relative;
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-position: center top;
+    background-size: cover; }
+  nav {
+    z-index: 100;
+    padding: 1.5rem; }
+    nav .logo-icons {
+      display: flex;
+      align-items: center; }
+      nav .logo-icons .icons {
+        position: absolute;
+        right: 25px; }
+        nav .logo-icons .icons .ham-img {
+          display: block; }
+        nav .logo-icons .icons .show-icon {
+          display: block; }
+        nav .logo-icons .icons:hover {
+          cursor: pointer; }
+    nav .anchor-links {
+      position: absolute;
+      background-color: #fff;
+      top: 20%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%);
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      opacity: 0;
+      transition: all 500ms ease; }
+      nav .anchor-links.show-links {
+        opacity: 1; }
+      nav .anchor-links .nav-links {
+        color: #000;
+        padding: 1.2rem;
+        font-weight: 700; }
+        nav .anchor-links .nav-links:not(:last-child) {
+          border-bottom: 1px solid #e6e6e6; } }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+.company-title-section {
+  position: relative; }
+  .company-title-section__logo-div {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translate(-50%); }
+  .company-title-section__header {
+    margin-top: 2.5rem;
+    text-align: center; }
+    .company-title-section__header--primary-heading {
+      font-size: 2.5rem; }
+    .company-title-section__header--primary-text {
+      margin-top: 1rem;
+      font-size: 1.6rem;
+      color: #7a7a7a; }
+  .company-title-section__btns {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .company-title-section__btns--btn1 {
+      padding: 1.8rem 4rem;
+      background-color: #3cb4ac;
+      border: none;
+      border-radius: 2.5rem;
+      color: #fff; }
+      .company-title-section__btns--btn1:hover {
+        background-color: #147b74; }
+    .company-title-section__btns--btn2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      border: none;
+      padding: 0 2rem 0 0;
+      border-radius: 2.4rem; }
+      .company-title-section__btns--btn2 svg g circle:hover {
+        fill: #7a7a7a; }
+      .company-title-section__btns--btn2.active-btn {
+        font-weight: 700;
+        color: #147b74; }
+        .company-title-section__btns--btn2.active-btn svg g circle {
+          fill: #147b74; }
+        .company-title-section__btns--btn2.active-btn svg g path {
+          fill: white; }
+
+@media screen and (max-width: 550px) {
+  .company-title-section__header--primary-heading {
+    font-size: 2rem; }
+  .company-title-section__header--primary-text {
+    font-size: 1.2rem; }
+  .company-title-section .company-title-section__btns--btn1 {
+    padding: 1.8rem 3rem; }
+  .company-title-section .company-title-section__btns--btn2 {
+    overflow: hidden;
+    padding: 0; }
+  .company-title-section .company-title-section__btns .button-text {
+    display: none; } }
+
+.funds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem; }
+  .funds__header:not(:last-child) {
+    border-right: 1px solid #e0e0e0; }
+  .funds__header:not(:first-child) {
+    padding-left: 3rem; }
+  .funds__header {
+    width: 70%; }
+    .funds__header--section-heading {
+      font-weight: 700;
+      font-size: 2.8rem; }
+    .funds__header--text {
+      margin-top: 1rem;
+      color: #7a7a7a;
+      font-size: 1.4rem; }
+  .funds__range {
+    width: 100%;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden; }
+    .funds__range--active {
+      border-radius: inherit;
+      height: 10px;
+      width: calc(100% - (100% - 69%));
+      background-color: #3cb4ac; }
+
+@media screen and (max-width: 635px) {
+  .funds {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; }
+    .funds__header:not(:first-child) {
+      padding-left: 0; }
+    .funds__header:not(:last-child) {
+      border-right: none; }
+    .funds__header:not(:last-child)::after {
+      content: '';
+      height: 1px;
+      width: 35%;
+      position: absolute;
+      top: 85px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #e0e0e0; }
+    .funds__header {
+      text-align: center;
+      margin-top: 1rem;
+      position: relative; }
+      .funds__header--section-heading {
+        font-size: 3rem; }
+      .funds__header--text {
+        margin-bottom: 2rem;
+        font-size: 1.5rem; } }
+
+.pledge-section__products {
+  border: 1px solid #e0e0e0;
+  padding: 3rem;
+  border-radius: 8px;
+  margin-top: 2rem; }
+
+.pledge-section .col {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem; }
+  .pledge-section .col--heading-primary {
+    font-size: 2rem;
+    font-weight: 700; }
+  .pledge-section .col--heading-secondry {
+    font-weight: 700;
+    font-size: 3rem;
+    position: relative; }
+  .pledge-section .col--heading-secondry::after {
+    content: 'left';
+    font-size: 1.4rem;
+    color: #7a7a7a;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    position: absolute;
+    top: 10px; }
+  .pledge-section .col--min-pledge-amount {
+    font-weight: 700;
+    color: #3cb4ac;
+    font-size: 1.5rem; }
+  .pledge-section .col--btn-secondry {
+    padding: 1.7rem 1.5rem;
+    width: 150px;
+    background-color: #3cb4ac;
+    border: none;
+    border-radius: 2.5rem;
+    color: #fff; }
+    .pledge-section .col--btn-secondry:hover {
+      background-color: #147b74; }
+
+.pledge-section .row-3 {
+  opacity: 0.5; }
+  .pledge-section .row-3 .col--btn-secondry {
+    background-color: #7a7a7a; }
+
+@media screen and (max-width: 550px) {
+  .pledge-section__products {
+    padding: 1.8rem; }
+  .pledge-section .col {
+    flex-direction: column; }
+    .pledge-section .col--heading-primary {
+      font-size: 1.5rem !important;
+      margin-bottom: 1rem; }
+    .pledge-section .col--heading-secondry {
+      margin-bottom: 1.5rem; }
+    .pledge-section .col--btn-secondry {
+      width: 100px;
+      padding: 1rem;
+      font-size: 1rem; } }
+
+.main-container {
+  width: 80rem;
+  margin: 0 auto;
+  position: relative;
+  top: -10rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px; }
+
+.section-center {
+  padding: 5rem;
+  border-radius: 1rem;
+  background-color: #fff; }
+
+.fund-tracking {
+  background-color: #fff; }
+
+.about .heading-primary {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem; }
+
+.about .heading-secondry {
+  font-weight: 700;
+  font-size: 2.5rem; }
+
+.about .paragraph {
+  color: #7a7a7a;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 1.65rem;
+  line-height: 28px;
+  text-align: left; }
+
+@media screen and (max-width: 550px) {
+  .about .heading-primary {
+    margin-bottom: 1.5rem; }
+  .about .paragraph {
+    font-size: 1.3rem; } }
+
+@media screen and (max-width: 810px) {
+  .main-container {
+    width: 100%; }
+  .section-center {
+    padding: 3rem; } }
+
+body {
+  max-width: 1440px;
+  min-width: 376px;
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+  background-color: #f7f7f7; }
+
+html {
+  font-size: 62.5%; }
