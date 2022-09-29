@@ -35,3 +35,27 @@ btn2.addEventListener('click', () => {
 
 })
 
+
+//  Modal Section
+
+const modalContainer = document.querySelector('.modal-container')
+const openModalBtns = document.querySelectorAll('.modal-open')
+const closeImg = document.getElementById('closeImg')
+console.log(modalContainer)
+console.log(openModalBtns)
+console.log(closeImg)
+
+openModalBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        console.log('first')
+        modalContainer.classList.add('modal-container__show-modal')
+    })
+})
+
+closeImg.addEventListener('click', () => {
+    modalContainer.classList.remove('modal-container__show-modal')
+
+})
+
+
+

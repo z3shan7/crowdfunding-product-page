@@ -22,21 +22,48 @@
 }
 
 .modal-container {
-    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transition-delay: 0.9s;
+    transition: all .3s;
+
+
+    &__show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+
+    }
+
+
+
+
+}
+
+.modal {
     width: 750px;
     z-index: 30;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     height: 90vh;
     transform: translate(-50%, -50%);
     overflow-y: scroll;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 
 
 }
 
-.modal-container::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
     display: none;
 }
 
@@ -112,7 +139,7 @@
         padding: 3rem;
     }
 
-    .modal-container {
+    .modal {
         width: 90vw;
     }
 
