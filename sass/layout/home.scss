@@ -21,45 +21,72 @@
     background-color: #fff;
 }
 
-.about {
+.heading-primary {
+    font-size: 2rem;
+    font-weight: 700;
 
-    .heading-primary {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
+}
 
-    .heading-secondry {
-        font-weight: 700;
-        font-size: 2.5rem;
+.heading-secondry {
+    font-weight: 700;
+    font-size: 2.5rem;
 
-    }
+}
 
-    .paragraph {
-        color: $Dark-gray;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
-        font-size: 1.65rem;
-        line-height: 28px;
-        text-align: left;
+.paragraph {
+    color: $Dark-gray;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 1.65rem;
+    line-height: 28px;
+    text-align: left;
+}
+
+.heading-primary {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.heading-secondry {
+    font-weight: 700;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+
+
+}
+
+.span {
+    font-size: 1.4rem;
+    color: hsl(0, 0%, 48%);
+    font-weight: 400;
+
+}
+
+
+.min-pledge-amount {
+    font-weight: 700;
+    color: $Moderate-cyan;
+    font-size: 1.5rem;
+}
+
+.btn-secondry {
+    padding: 1.7rem 1.5rem;
+    width: 150px;
+    background-color: $Moderate-cyan;
+    border: none;
+    border-radius: 2.5rem;
+    color: #fff;
+    font-family: $font-f;
+
+    &:hover {
+        background-color: $Dark-cyan;
     }
 }
 
-@media screen and (max-width:550px) {
 
-    .about {
-
-        .heading-primary {
-            margin-bottom: 1.5rem;
-
-        }
-
-        .paragraph {
-            font-size: 1.3rem;
-        }
-    }
-
-}
 
 @media screen and (max-width:810px) {
     .main-container {
@@ -71,4 +98,34 @@
     }
 
 
+}
+
+@media screen and (max-width:550px) {
+
+
+    .paragraph {
+        font-size: 1.3rem;
+        line-height: 22px;
+    }
+
+    .heading-primary {
+        font-size: 1.5rem !important;
+
+    }
+
+    .heading-secondry {
+        margin-bottom: 1.5rem;
+    }
+
+    .min-pledge-amount {
+
+
+        font-size: 1.2rem;
+    }
+
+    .btn-secondry {
+        width: 100px;
+        padding: 1.3rem;
+        font-size: 1rem;
+    }
 }
