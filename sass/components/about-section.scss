@@ -16,14 +16,18 @@
     }
 
 
-    .row-3 {
-        opacity: 0.5;
 
-        .btn-opacity {
-            background-color: hsl(0, 0%, 48%);
+}
 
-        }
+.row-3 {
+    opacity: 0.5;
+    pointer-events: none;
+
+    .btn-opacity {
+        background-color: hsl(0, 0%, 48%);
+
     }
+
 
 }
 

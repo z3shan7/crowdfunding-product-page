@@ -1,4 +1,53 @@
 .modal {
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        right: -10px;
+        top: -15px;
+    }
+
+
+    &__heading {
+        font-size: 2.2rem !important;
+
+    }
+
+
+
+    &__radio {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid $Dark-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__radio::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: inherit;
+        background-color: $Moderate-cyan;
+    }
+
+    .disabled {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid $Dark-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
 
 
     &__column {
@@ -16,6 +65,7 @@
     &__bottom {
         padding: 2rem;
         border-top: 1px solid hsl(0, 0%, 88%);
+        // display: none;
 
     }
 
@@ -87,9 +137,9 @@
 
     &__inner {
         display: flex;
-        align-items: center;
+        // align-items: flex-start;
         margin-bottom: 2rem;
-        gap: 10px;
+        gap: 15px;
     }
 
     .flex {
@@ -107,7 +157,7 @@
 
 
     .modal-paragraph {
-        margin-left: 2.7rem;
+        margin-left: 3.7rem !important;
         font-size: 1.5rem;
     }
 
@@ -119,6 +169,10 @@
 @media screen and (max-width:550px) {
 
     .modal {
+
+        &__inner {
+            align-items: center;
+        }
 
 
 
@@ -135,18 +189,14 @@
         }
 
         .modal-paragraph {
-            margin-left: 0;
-            font-size: 1.2rem;
+            margin-left: 0 !important;
+            // font-size: 1.2rem;
         }
 
         &__input {
             height: 40px;
         }
 
-        &__top {
-
-            padding: 3rem 1.5rem;
-        }
 
         &__bottom {
             padding: 2rem 1rem;
