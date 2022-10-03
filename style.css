@@ -245,7 +245,7 @@ picture {
   margin-bottom: 2rem;
   margin-left: 2rem; }
 
-.modal__heading {
+.modal__header {
   font-size: 2.2rem !important; }
 
 .modal__radio {
@@ -259,36 +259,44 @@ picture {
   justify-content: center;
   cursor: pointer; }
 
-.modal__radio::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: inherit;
-  background-color: #3cb4ac; }
-
-.modal .disabled {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 1px solid #7a7a7a;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 .modal__column {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   margin-top: 2rem; }
+  .modal__column.active {
+    border-color: #3cb4ac; }
+    .modal__column.active .modal__radio::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: inherit;
+      background-color: #3cb4ac; }
+    .modal__column.active .modal__bottom {
+      display: block; }
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1; }
+
+.modal .modal-paragraph {
+  margin-left: 3.7rem !important;
+  font-size: 1.5rem; }
 
 .modal__top {
   padding: 3rem;
   position: relative; }
 
+.modal__heading:hover {
+  color: #3cb4ac;
+  cursor: pointer; }
+
 .modal__bottom {
   padding: 2rem;
-  border-top: 1px solid #e0e0e0; }
+  border-top: 1px solid #e0e0e0;
+  display: none; }
 
 .modal .submit-form {
   display: flex;
@@ -341,15 +349,15 @@ picture {
   margin-bottom: 2rem;
   gap: 15px; }
 
-.modal .flex {
+.modal .disabled {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #7a7a7a;
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-grow: 1; }
-
-.modal .modal-paragraph {
-  margin-left: 3.7rem !important;
-  font-size: 1.5rem; }
+  justify-content: center; }
 
 @media screen and (max-width: 550px) {
   .modal__inner {
@@ -401,13 +409,10 @@ picture {
   z-index: 30;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.5);
-  transition-delay: 0.9s;
   transition: all .3s; }
   .modal-container__show-modal {
     opacity: 1;
-    visibility: visible;
-    transform: scale(1); }
+    visibility: visible; }
 
 .modal {
   width: 750px;

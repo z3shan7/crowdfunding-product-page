@@ -1,4 +1,3 @@
-
 // Navbar
 const openBtn = document.querySelector('.logo-icons .ham-img');
 const closeBtn = document.querySelector('.logo-icons .close-img');
@@ -41,9 +40,11 @@ btn2.addEventListener('click', () => {
 const modalContainer = document.querySelector('.modal-container')
 const openModalBtns = document.querySelectorAll('.modal-open')
 const closeImg = document.getElementById('closeImg')
-console.log(modalContainer)
-console.log(openModalBtns)
-console.log(closeImg)
+const modalColumn = document.querySelectorAll('.modal__column')
+// console.log(modalContainer)
+// console.log(openModalBtns)
+// console.log(closeImg)
+// console.log(modalColumn)
 
 openModalBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -57,5 +58,18 @@ closeImg.addEventListener('click', () => {
 
 })
 
+
+
+modalColumn.forEach((column) => {
+    column.addEventListener('click', (e) => {
+
+        column.classList.remove('active')
+        const selected = e.currentTarget;
+        selected.classList.add('active')
+
+        console.log(selected)
+
+    })
+})
 
 
