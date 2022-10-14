@@ -32,8 +32,6 @@
     </header>
     <main>
         <div class="main-container">
-
-            <!--  first section -->
             <div class="company-title-section section-center">
                 <div class="company-title-section__logo-div">
                     <img src="./images/logo-mastercraft.svg" alt="Company logo"
@@ -59,9 +57,7 @@
                 </div>
             </div>
 
-            <!-- first section ends -->
 
-            <!-- second section  -->
 
             <section class="fund-tracking section-center">
                 <div class="funds">
@@ -85,8 +81,7 @@
                 </div>
             </section>
 
-            <!-- second section ends -->
-            <!-- third section  -->
+
 
 
             <section class="about section-center">
@@ -114,7 +109,7 @@
                             you’ll be added to a special Backer member list.</p>
                         <div class="col">
                             <p class="heading-secondry">101 <span class="span">left</span></p>
-                            <button class="btn-secondry modal-open">Select Reward</button>
+                            <button class="btn-secondry" id="bambooBtn">Select Reward</button>
                         </div>
                     </div>
                     <div class="pledge-section__products row-2">
@@ -127,7 +122,7 @@
                             member list. Shipping is included.</p>
                         <div class="col">
                             <p class="heading-secondry">64 <span class="span">left</span></p>
-                            <button class="btn-secondry modal-open">Select Reward</button>
+                            <button class="btn-secondry" id="blackEditionBtn">Select Reward</button>
                         </div>
                     </div>
                     <div class="pledge-section__products row-3">
@@ -188,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal__column">
+                    <div class="modal__column modal__bamboo-Stand">
                         <div class="modal__top">
 
                             <div class="modal__inner">
@@ -213,22 +208,19 @@
                         <div class="modal__bottom">
                             <div class="submit-form">
                                 <p class="modal__text">Enter your pledge</p>
-                                <div class="pledge-form">
+                                <form action="#" class="pledge-form">
                                     <div class="modal__form">
                                         <input type="text" class="modal__input" value="25">
-
                                     </div>
-                                    <button class="btn-secondry modal__btn">Continue</button>
-                                </div>
+                                    <button type="submit" class="btn-secondry modal__btn">Continue</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
-                    <div class="modal__column">
+                    <div class="modal__column modal__black-Edition">
                         <div class="modal__top">
-
                             <div class="modal__inner">
-
-
                                 <div class="form-group">
                                     <div class="modal__radio"></div>
                                 </div>
@@ -247,13 +239,12 @@
                         <div class="modal__bottom">
                             <div class="submit-form">
                                 <p class="modal__text">Enter your pledge</p>
-                                <div class="pledge-form">
+                                <form action="#" class="pledge-form" id="">
                                     <div class="modal__form">
                                         <input type="text" class="modal__input" value="75">
-
                                     </div>
                                     <button class="btn-secondry modal__btn">Continue</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -281,33 +272,25 @@
 
                     </div>
                 </div>
-
-
-
-
-
-
-
-
             </section>
+            <div class="thanku-modal">
+                <div class="thanku-modal__content section-center">
 
+                    <div class="thanku-modal__checkImg">
 
-
-
-            <!-- modal container ends -->
-
-
-
-
-
+                        <img src="./images/icon-check.svg" alt="check icon">
+                    </div>
+                    <p class="thanku-modal__header">Thanks for your support!</p>
+                    <p class="thanku-modal__paragraph">Your pledge brings us one step closer to sharing Mastercraft
+                        Bamboo
+                        Monitor Riser worldwide. You will get
+                        an email once our campaign is completed.</p>
+                    <button class="btn-secondry">Got it!</button>
+                </div>
+            </div>
         </div>
 
-
     </main>
-
-
-
-
     <script src="app.js"></script>
 </body>
 
