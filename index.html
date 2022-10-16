@@ -63,11 +63,11 @@
                 <div class="funds">
 
                     <div class="funds__header">
-                        <p class="funds__header--section-heading" id="fundAmount ">$89,914</p>
+                        <p class="funds__header--section-heading" id="fundedAmount">$89,914</p>
                         <p class="funds__header--text" id="needed"> of $100,000 backed</p>
                     </div>
                     <div class="funds__header">
-                        <p class="funds__header--section-heading" id="fundAmount">5007</p>
+                        <p class="funds__header--section-heading" id="totalBackers">5007</p>
                         <p class="funds__header--text"> total backers</p>
                     </div>
                     <div class="funds__header">
@@ -179,7 +179,7 @@
                         </div>
                         <div class="modal__bottom">
                             <div class="btn-align">
-                                <button class="btn-secondry modal__btn">Continue</button>
+                                <button class="btn-secondry modal__btn" id="pledgeBtn">Continue</button>
                             </div>
                         </div>
                     </div>
@@ -208,9 +208,9 @@
                         <div class="modal__bottom">
                             <div class="submit-form">
                                 <p class="modal__text">Enter your pledge</p>
-                                <form action="#" class="pledge-form">
+                                <form action="#" id="bamboo-form">
                                     <div class="modal__form">
-                                        <input type="text" class="modal__input" value="25">
+                                        <input type="text" class="modal__input" id="bamboo-input" value="25">
                                     </div>
                                     <button type="submit" class="btn-secondry modal__btn">Continue</button>
                                 </form>
@@ -228,7 +228,8 @@
                                     <p class="heading-primary modal__heading">Black Edition Stand</p>
                                     <p class="min-pledge-amount">Pledge $75 or more</p>
                                 </div>
-                                <p class="heading-secondry modal__sub-heading">64 <span class="span">left</span>
+                                <p class="heading-secondry modal__sub-heading" id="reward-count">64 <span
+                                        class="span">left</span>
                                 </p>
                             </div>
 
@@ -239,9 +240,10 @@
                         <div class="modal__bottom">
                             <div class="submit-form">
                                 <p class="modal__text">Enter your pledge</p>
-                                <form action="#" class="pledge-form" id="">
+                                <form action="#" id="black-edition-form">
                                     <div class="modal__form">
-                                        <input type="text" class="modal__input" value="75">
+                                        <input type="text" class="modal__input" id="blackEdition-input" value="75"
+                                            id="input-modal">
                                     </div>
                                     <button class="btn-secondry modal__btn">Continue</button>
                                 </form>
@@ -285,7 +287,7 @@
                         Bamboo
                         Monitor Riser worldwide. You will get
                         an email once our campaign is completed.</p>
-                    <button class="btn-secondry">Got it!</button>
+                    <button class="btn-secondry" id="thankuBtn">Got it!</button>
                 </div>
             </div>
         </div>
