@@ -39,7 +39,7 @@ const thankuModal = document.querySelector('.thanku-modal')
 const modalBtn = document.querySelectorAll('.modal__btn')
 const pledgeBtn = document.getElementById('pledgeBtn')
 const thankuBtn = document.getElementById('thankuBtn')
-console.log(pledgeBtn)
+
 
 ///////////////  Open close modal functionalities ////////////////
 
@@ -51,7 +51,6 @@ const closeModalBtn = () => {
     modalColumn.forEach(item => item.classList.remove('active'))
 }
 const thankuPopup = () => {
-    // const modalBtn = [...document.querySelectorAll('.modal__btn')].disabled = false
 
     thankuModal.classList.add('thanku-modal__show-check-modal')
     modalContainer.classList.remove('modal-container__show-modal')
@@ -67,8 +66,8 @@ closeImg.addEventListener('click', closeModalBtn)
 modalBtn.forEach(btn => btn.addEventListener('submit', thankuPopup))
 pledgeBtn.addEventListener('click', () => {
     thankuPopup()
-    // console.log('backed')
     addingReward()
+
 })
 thankuBtn.addEventListener('click', closePopup)
 
@@ -95,11 +94,13 @@ bambooBtn.addEventListener('click', () => {
     openModal()
     bambooStand.classList.add('active')
 
+
 })
 
 blackEditionBtn.addEventListener('click', () => {
     openModal()
     blackEdition.classList.add('active')
+
 
 })
 
@@ -111,13 +112,12 @@ const blackEditionForm = document.getElementById('black-edition-form')
 const bambooInput = document.getElementById('bamboo-input')
 const blackEditionInput = document.getElementById('blackEdition-input')
 
-console.log(bambooForm)
-console.log(blackEditionInput.value)
 
-// modalBtn.disabled = true
+
+
 
 function checkLength(input, min, max) {
-    if (input.value < min || input.value.contains === 'aaaa') {
+    if (input.value < min) {
         const modalBtn = document.querySelectorAll('.modal__btn').disabled = true
         console.log('working')
     }
@@ -126,6 +126,9 @@ function checkLength(input, min, max) {
         addingReward()
         closeModalBtn()
 
+
+
+
     }
 }
 
@@ -133,46 +136,45 @@ bambooForm.addEventListener('submit', (e) => {
     e.preventDefault()
     checkLength(bambooInput, 25, 26)
 
+    // numbOfReward()
+
 })
 
 blackEditionForm.addEventListener('submit', (e) => {
     e.preventDefault()
     checkLength(blackEditionInput, 75, 76)
 })
-bambooInput.addEventListener('keydown', (e) => {
-    inputInNumb(e)
-})
-blackEditionInput.addEventListener('keydown', (e) => {
-    inputInNumb(e)
-})
 
-const inputInNumb = (e) => {
-    let char = String.fromCharCode(e.which);
-    if (!(/[0-9]/.test(char))) {
-        e.preventDefault()
-    }
-
-}
 
 
 ///////////////  Adding Reward ////////////////
-const fundedAmount = document.getElementById('fundedAmount')
+const fundedAmount = document.getElementById('fundedAmount').textContent = `$ ${89914}`;
 const totalBackers = document.getElementById('totalBackers')
 const rewardCount = document.getElementById('reward-count')
+const rewardLeftBamboo = document.querySelectorAll('.reward-left-bamboo')
+const rewardLeftBlack = document.querySelectorAll('.reward-left-black')
 
-// console.log('fundedAmount')
-console.log('rewardCount')
 
 
-let currentValue = 5008
+let currentValue = 5007 + 1;
 const addingReward = () => {
     let innerValue = currentValue++
     totalBackers.innerHTML = parseInt(innerValue)
 }
 
-const rewardLeft = () => {
+// function numbOfReward() {
+//     rewardLeftBamboo.forEach(reward => {
+//         // let rewardInNumb = parseFloat(reward.textContent)
+//         // console.log(rewardInNumb--)
+//         let countIs = parseFloat(reward.textContent)
+//         countIs++
+//         console.log(countI)
 
-}
+//     })
+
+// }
+
+
 
 
 
