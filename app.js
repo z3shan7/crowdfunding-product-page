@@ -63,7 +63,7 @@ const closePopup = () => {
 
 openModalBtns.addEventListener('click', openModal)
 closeImg.addEventListener('click', closeModalBtn)
-modalBtn.forEach(btn => btn.addEventListener('submit', thankuPopup))
+modalBtn.forEach(btn => btn.addEventListener('click', thankuPopup))
 pledgeBtn.addEventListener('click', () => {
     thankuPopup()
     addingReward()
@@ -148,12 +148,14 @@ blackEditionForm.addEventListener('submit', (e) => {
 
 
 ///////////////  Adding Reward ////////////////
-const fundedAmount = document.getElementById('fundedAmount').textContent = `$ ${89914}`;
+const fundedAmount = document.getElementById('fundedAmount')
 const totalBackers = document.getElementById('totalBackers')
 const rewardCount = document.getElementById('reward-count')
 const rewardLeftBamboo = document.querySelectorAll('.reward-left-bamboo')
 const rewardLeftBlack = document.querySelectorAll('.reward-left-black')
 
+
+console.log(parseFloat(fundedAmount.textContent))
 
 
 let currentValue = 5007 + 1;
