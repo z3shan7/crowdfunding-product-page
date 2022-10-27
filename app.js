@@ -71,6 +71,12 @@ pledgeBtn.addEventListener('click', () => {
 })
 thankuBtn.addEventListener('click', closePopup)
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains('modal-container__show-modal')) {
+        closeModalBtn()
+    }
+})
+
 ///////////////  Adding active class ////////////////
 
 const modalColumn = document.querySelectorAll('.modal__column')
