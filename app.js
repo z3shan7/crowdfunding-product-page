@@ -135,8 +135,8 @@ const modalInput = document.querySelectorAll('.modal__input')
 bambooForm.addEventListener('submit', (e) => {
     e.preventDefault()
     addingBackers()
-    checkLength(bambooInput, 24, 25)
     displayRewardLeft()
+    checkLength(bambooInput, 24, 25)
     addToTotalCount(bambooInput.value)
     // addingReward()
 
@@ -204,7 +204,7 @@ const addingBackers = () => {
 let currentReward = 101 - 1;
 
 const displayRewardLeft = () => {
-    if (bambooInput >= 25) {
+    if (bambooInput.value >= 25) {
         let AmountSubs = currentReward--
         rewardLeftBamboo.forEach((btn) => {
             btn.innerHTML = `<p class="rewardLeftBamboo">${AmountSubs} <span class="span">left</span></p>`
@@ -214,7 +214,7 @@ const displayRewardLeft = () => {
 
 let rewardBamboo = 64 - 1
 const rewardSub = () => {
-    if (blackEditionInput >= 75) {
+    if (blackEditionInput.value >= 75) {
         let AmountSubs = rewardBamboo--
         rewardLeftBlack.forEach((btn) => {
             btn.innerHTML = `<p class="rewardLeftBlack">${AmountSubs} <span class="span">left</span></p>`
