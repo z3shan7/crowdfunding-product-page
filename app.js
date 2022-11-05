@@ -188,7 +188,7 @@ const addToTotalCount = (count) => {
     n = n.replace(/\,/g, '');
     n = parseInt(n, 10);
     n += Number(count);
-    // fundedAmount.innerHTML = n.toLocaleString("en-US");
+    fundedAmount.innerHTML = n.toLocaleString("en-US");
     console.log(+count + 89914)
     // updateRange();
 }
