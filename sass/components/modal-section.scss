@@ -274,6 +274,10 @@
     .thanku-modal {
         width: 100%;
         padding: 0 2rem;
+
+        &__content {
+            width: 90%;
+        }
     }
 
 }
