@@ -39,6 +39,8 @@ const thankuModal = document.querySelector('.thanku-modal')
 const modalBtn = document.querySelectorAll('.modal__btn')
 const pledgeBtn = document.getElementById('pledgeBtn')
 const thankuBtn = document.getElementById('thankuBtn')
+const bambooModalBtn = document.getElementById('bambooModalBtn')
+const blackEditionModalBtn = document.getElementById('blackEditionModalBtn')
 
 
 ///////////////  Open close modal functionalities ////////////////
@@ -63,10 +65,13 @@ const closePopup = () => {
 
 openModalBtns.addEventListener('click', openModal)
 closeImg.addEventListener('click', closeModalBtn)
-modalBtn.forEach(btn => btn.addEventListener('click', thankuPopup))
+
+///////////////  Modal EventListeners ////////////////
+
+
 pledgeBtn.addEventListener('click', () => {
+    addingBackers()
     thankuPopup()
-    addingReward()
 
 })
 thankuBtn.addEventListener('click', closePopup)
@@ -115,72 +120,107 @@ blackEditionBtn.addEventListener('click', () => {
 
 const bambooForm = document.getElementById('bamboo-form')
 const blackEditionForm = document.getElementById('black-edition-form')
-const bambooInput = document.getElementById('bamboo-input')
-const blackEditionInput = document.getElementById('blackEdition-input')
-
-
-
-
-
-function checkLength(input, min, max) {
-    if (input.value < min) {
-        const modalBtn = document.querySelectorAll('.modal__btn').disabled = true
-        console.log('working')
-    }
-    else {
-        (input.value >= max)
-        addingReward()
-        closeModalBtn()
-
-
-
-
-    }
-}
-
-bambooForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    checkLength(bambooInput, 25, 26)
-
-    // numbOfReward()
-
-})
-
-blackEditionForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    checkLength(blackEditionInput, 75, 76)
-})
-
-
-
-///////////////  Adding Reward ////////////////
 const fundedAmount = document.getElementById('fundedAmount')
 const totalBackers = document.getElementById('totalBackers')
 const rewardCount = document.getElementById('reward-count')
 const rewardLeftBamboo = document.querySelectorAll('.reward-left-bamboo')
 const rewardLeftBlack = document.querySelectorAll('.reward-left-black')
+// const rewardLeft = document.querySelectorAll('.reward-left')z
+const bambooInput = document.getElementById('bamboo-input')
+const blackEditionInput = document.getElementById('blackEdition-input')
+const modalInput = document.querySelectorAll('.modal__input')
 
 
-console.log(parseFloat(fundedAmount.textContent))
+
+bambooForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    addingBackers()
+    checkLength(bambooInput, 24, 25)
+    displayRewardLeft()
+    addToTotalCount(bambooInput.value)
+    // addingReward()
+
+
+})
+
+
+blackEditionForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    addingBackers()
+    checkLength(blackEditionInput, 74, 75)
+    rewardSub()
+})
+
+
+
+///////////////  Adding and subtracting Reward ////////////////
+
+// console.log(modalInput)
+
+
+
+function checkLength(input, min, max) {
+    if (input.value < min) {
+        Error('Input cannot empty')
+
+    }
+    if (input.value >= max) {
+
+        thankuPopup()
+    }
+}
+
+
+// let rewardBacked = 89914;
+
+// console.log(rewardBacked + 400 + 200 + 25)
+// const addingReward = () => {
+//     modalInput.forEach((input) => {
+//         let AmountBacked = rewardBacked + Number(input.value)
+//         fundedAmount.innerHTML = `<p class="funds__header--section-heading" id="fundedAmount">$${AmountBacked}</p>`
+//         console.log(AmountBacked)
+
+//     })
+// }
+
+const addToTotalCount = (count) => {
+    let n = fundedAmount.innerHTML;
+    n = n.replace(/\,/g, '');
+    n = parseInt(n, 10);
+    n += Number(count);
+    // fundedAmount.innerHTML = n.toLocaleString("en-US");
+    console.log(+count + 89914)
+    // updateRange();
+}
 
 
 let currentValue = 5007 + 1;
-const addingReward = () => {
+const addingBackers = () => {
     let innerValue = currentValue++
-    totalBackers.innerHTML = parseInt(innerValue)
+    totalBackers.textContent = parseInt(innerValue)
 }
 
-// function numbOfReward() {
-//     rewardLeftBamboo.forEach(reward => {
-//         // let rewardInNumb = parseFloat(reward.textContent)
-//         // console.log(rewardInNumb--)
-//         let countIs = parseFloat(reward.textContent)
-//         countIs++
-//         console.log(countI)
 
-//     })
+let currentReward = 101 - 1;
 
-// }
+const displayRewardLeft = () => {
+    if (bambooInput >= 25) {
+        let AmountSubs = currentReward--
+        rewardLeftBamboo.forEach((btn) => {
+            btn.innerHTML = `<p class="rewardLeftBamboo">${AmountSubs} <span class="span">left</span></p>`
+        })
+    }
+}
+
+let rewardBamboo = 64 - 1
+const rewardSub = () => {
+    if (blackEditionInput >= 75) {
+        let AmountSubs = rewardBamboo--
+        rewardLeftBlack.forEach((btn) => {
+            btn.innerHTML = `<p class="rewardLeftBlack">${AmountSubs} <span class="span">left</span></p>`
+        })
+    }
+}
 
 
 
